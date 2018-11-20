@@ -1,5 +1,7 @@
 package com.workShopMongo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +21,9 @@ public class PostsService {
 		}
 		
 		return this.repo.findById(id).orElse(null);
+	}
+	
+	public List<Post> findyByTitle(String text){
+		return repo.findByTitleContaining(text);
 	}
 }
