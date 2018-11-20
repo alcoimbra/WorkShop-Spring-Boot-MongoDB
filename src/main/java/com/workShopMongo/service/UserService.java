@@ -37,7 +37,7 @@ public class UserService {
 		repo.deleteById(id);
 	}
 	
-	/*public User update(User obj) {
+	public User update(User obj) {
 		User newObj = repo.findOne(obj.getId());
 		updateData(newObj, obj);
 		
@@ -47,7 +47,7 @@ public class UserService {
 	private void updateData(User newObj, User obj) {
 		newObj.setName(obj.getName());
 		newObj.setEmail(obj.getEmail());
-	}*/
+	}
 	
 	public User fromDTO(UserDTO objDto) {
 		return new User(objDto.getId(), objDto.getName(), objDto.getEmail());
