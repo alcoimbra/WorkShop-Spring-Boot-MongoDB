@@ -24,6 +24,6 @@ public class PostsService {
 	}
 	
 	public List<Post> findyByTitle(String text){
-		return repo.findByTitleContaining(text);
+		return repo.serachTitle(text);
 	}
 }
